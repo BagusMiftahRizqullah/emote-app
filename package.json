@@ -7,11 +7,32 @@
     "ios": "react-native run-ios",
     "lint": "eslint .",
     "start": "react-native start",
-    "test": "jest"
+    "test": "jest",
+    "bundle-android": "(react-native bundle --platform android --dev false --entry-file index.js --bundle-output android/app/src/main/assets/index.android.bundle --assets-dest android/app/src/main/res/)",
+    "release-android": "(cd android && ./gradlew assembleRelease && cd .. && say -v good 'Android rilis') || (cd .. && say -v Bad 'Android Release Failed')",
+    "releaseb-android": "cd android && ./gradlew bundleRelease && cd .. && say -v good 'Android rilis'",
+    "build-android": "cd android && ./gradlew assembleDebug",
+    "bundle-ios": "(react-native bundle --entry-file index.js --platform ios --dev false --bundle-output ios/main.jsbundle --assets-dest ios && say -v trinoids 'IOS Bundle Done') || say -v Bad 'Bundle IOS Bad'"
   },
   "dependencies": {
+    "@react-navigation/bottom-tabs": "^6.6.1",
+    "@react-navigation/native": "^6.1.18",
+    "@react-navigation/stack": "^6.4.1",
+    "lottie-ios": "^3.2.3",
+    "lottie-react-native": "^7.0.0",
     "react": "18.3.1",
-    "react-native": "0.76.1"
+    "react-native": "0.76.1",
+    "react-native-chart-kit": "^6.12.0",
+    "react-native-gesture-handler": "^2.20.2",
+    "react-native-modal": "^13.0.1",
+    "react-native-reanimated": "^3.16.1",
+    "react-native-responsive-screen": "^1.4.2",
+    "react-native-safe-area-context": "^4.12.0",
+    "react-native-screens": "^3.35.0",
+    "react-native-svg": "^15.8.0",
+    "react-native-switch-selector": "^2.3.0",
+    "react-redux": "^9.1.2",
+    "redux": "^5.0.1"
   },
   "devDependencies": {
     "@babel/core": "^7.25.2",
