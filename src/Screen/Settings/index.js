@@ -14,7 +14,7 @@ const Settings = () => {
   ];
 
   return (
-    <View style={{ flex: 1, paddingHorizontal: heightPercentageToDP('2%'), paddingTop: heightPercentageToDP('2%')  }}>
+    <View style={{ flex: 1, paddingHorizontal: heightPercentageToDP('1%'), paddingTop: heightPercentageToDP('1%')  }}>
        <LottieView
           source={require('../../Assets/settings.json')}
           autoPlay
@@ -22,7 +22,7 @@ const Settings = () => {
           speed={1}
           style={{
               width: widthPercentageToDP('100%'),
-              height: heightPercentageToDP('30%'),
+              height: heightPercentageToDP('50%'),
           }}
           />
       <View style={{

@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { StyleSheet, Text, TouchableOpacity, View, Image } from 'react-native';
+import { StyleSheet, Text, TouchableOpacity, View, Image, SafeAreaView } from 'react-native';
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 import useMood from '../../ViewModels/moodViewModels';
 import ModalEmot from '../../Components/ModalEmot';
@@ -126,7 +126,7 @@ const Home = () => {
 
 
   return (
-    <View style={{ flex: 1, padding: 15, backgroundColor:'#FFFFFF' }}>
+    <SafeAreaView style={{ flex: 1, padding: 15, backgroundColor:'#FFFFFF' }}>
       <Text style={styles.textHeader}>How are you feeling right now?</Text>
       <View style={{paddingVertical: 15}}>
         {
@@ -148,7 +148,7 @@ const Home = () => {
         }
       </View>
       <ModalEmot typeEmot={selectedEmote.typeAnimated} isVisible={visible}/>
-    </View>
+    </SafeAreaView>
   );
 };
 

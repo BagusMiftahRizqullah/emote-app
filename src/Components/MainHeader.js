@@ -1,17 +1,17 @@
-import { StyleSheet, Text, View } from 'react-native';
+import { StyleSheet, Text, View, SafeAreaView } from 'react-native';
 import React from 'react';
 import { heightPercentageToDP, widthPercentageToDP } from 'react-native-responsive-screen';
 
 
 const MainHeader = ({title}) => {
   return (
-    <View>
+    <SafeAreaView>
         {
             title ?
             <Text style={styles.textHeader}>{title}</Text> :
             null
         }
-    </View>
+    </SafeAreaView>
   );
 };
 
